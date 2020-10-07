@@ -1,15 +1,13 @@
 {
-  "name": "presents-list",
+  "name": "@edapm/presents-list",
   "version": "0.5.0",
   "description": "A React / Firebase app to keep track of Christmas presents",
-  "main": "index.js",
+  "main": "App.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/edapm/presents-list.git"
-  },
+  "repository": "git+https://github.com/edapm/presents-list.git",
   "keywords": [
     "presents",
     "list",
@@ -23,11 +21,20 @@
   },
   "homepage": "https://github.com/edapm/presents-list#readme",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "fontsource-roboto": "^3.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.2",
+    "eslint-plugin-react-hooks": "^4.1.2",
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.1.2"
   }

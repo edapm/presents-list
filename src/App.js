@@ -1,13 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Button from "@material-ui/core/Button";
+import Menu from "./Menu";
+import List from "./List";
+import Footer from "./Footer"
 
 const App = () => {
   return (
-    <Button variant="contained" color="primary">
-      Hello World
-    </Button>
-  );
-};
+    <div>
+      <Menu></Menu>
+      <List name="My Presents List"></List>
+      <List name="Everyone Else's Lists"></List>
+      <Footer></Footer>
+    </div>
+  )
+}
+
 
 ReactDOM.render(<App />, document.getElementById("root"));

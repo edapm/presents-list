@@ -23,11 +23,15 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "fir": "^3.0.7",
+    "fire": "^0.55.1",
     "firebase": "^7.23.0",
+    "firebaseui": "^4.6.1",
     "fontsource-roboto": "^3.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-firebase-hooks": "^2.2.0"
+    "react-firebase-hooks": "^2.2.0",
+    "react-firebaseui": "^4.1.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",

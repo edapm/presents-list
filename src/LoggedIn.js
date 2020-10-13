@@ -1,13 +1,13 @@
 import React from "react";
 import Menu from "./Menu";
-import List from "./List";
 import Header from "./Header";
+import MyList from "./MyList";
 
 const LoggedIn = () => {
     return (
         <div>
             <Header></Header>
-            <List></List>
+            <MyList></MyList>
             <Menu></Menu>
         </div>
     )

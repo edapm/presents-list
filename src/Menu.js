@@ -8,6 +8,9 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Container from '@material-ui/core/Container';
 import * as firebase from "firebase/app";
 import "firebase/auth";
+import { Init } from "./Firebase";
+
+Init();
 
 const auth = firebase.auth();
 

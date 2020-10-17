@@ -3,12 +3,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { useCollectionData } from "react-firebase-hooks/firestore";
-import firebase from "./Firebase";
+import { firebase } from "./Firebase";
 
 const firestore = firebase.firestore();
 
 const ref = firestore.collection("presents");
-const [presents, setPresents] = useState([]);
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const MyList = () => {
+  const [presents, setPresents] = useState([]);
   ref.onSnapshot((querySnapshot) => {
       const items = [];
       querySnapshot.forEach((doc) => {

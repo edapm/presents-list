@@ -15,6 +15,4 @@ firebase.initializeApp({
 })
 }
 
-Init();
-
-export default firebase;
+export { firebase, Init};

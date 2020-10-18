@@ -4,8 +4,8 @@
   "description": "A React / Firebase app to keep track of Christmas presents",
   "main": "App.js",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "dev": "scss src/style.scss src/style.css && parcel src/index.html",
+    "build": "scss src/style.scss src/style.css && parcel build src/index.html"
   },
   "repository": "git+https://github.com/edapm/presents-list.git",
   "keywords": [

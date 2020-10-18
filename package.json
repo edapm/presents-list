@@ -25,7 +25,7 @@
     "@material-ui/icons": "^4.9.1",
     "fir": "^3.0.7",
     "fire": "^0.55.1",
-    "firebase": "^7.23.0",
+    "firebase": "^7.24.0",
     "fontsource-roboto": "^3.0.3",
     "rea": "^0.0.1",
     "react": "^16.13.1",

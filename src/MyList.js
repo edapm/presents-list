@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
 import { makeStyles } from '@material-ui/core/styles';
+import CancelIcon from '@material-ui/icons/Cancel';
+import IconButton from '@material-ui/core/IconButton';
 import { firebase } from "./Firebase";
 
 const useStyles = makeStyles((theme) => ({
@@ -24,20 +25,24 @@ const ref = firestore.collection("presents");
 const MyList = () => {
   const classes = useStyles();
   const [presents, setPresents] = useState([]);
-  ref.onSnapshot((querySnapshot) => {
-      const items = [];
-      querySnapshot.forEach((doc) => {
-        items.push(doc.data());
-      });
-      setPresents(items);
-    });
+  const { uid } = auth.currentUser;
+  const query = ref.where("uid", "==", uid);
 
-  
+  query.get().then(function (querySnapshot) {
+    const items = [];
+    querySnapshot.forEach(function (doc) {
+        items.push(doc.data());
+    });
+    setPresents(items);
+  });
+
+
 
   var html = presents.map ( present => 
       <Paper key={present.id} className={classes.root, classes.paper}>
         <h1>{present.name}</h1>
-        <h3>{present.info}</h3>
+        <h2>£{present.price}</h2>
+        <IconButton><CancelIcon></CancelIcon></IconButton>
       </Paper>
       );
 

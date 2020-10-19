@@ -31,7 +31,8 @@
     "react": "^16.14.0",
     "react-dom": "^16.13.1",
     "react-firebase-hooks": "^2.2.0",
-    "react-firebaseui": "^4.1.0"
+    "react-firebaseui": "^4.1.0",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",

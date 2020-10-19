@@ -28,7 +28,7 @@
     "firebase": "^7.24.0",
     "fontsource-roboto": "^3.0.3",
     "rea": "^0.0.1",
-    "react": "^16.13.1",
+    "react": "^16.14.0",
     "react-dom": "^16.13.1",
     "react-firebase-hooks": "^2.2.0",
     "react-firebaseui": "^4.1.0"

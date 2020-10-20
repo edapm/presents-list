@@ -31,18 +31,20 @@ const MyList = () => {
   query.get().then(function (querySnapshot) {
     const items = [];
     querySnapshot.forEach(function (doc) {
-        items.push(doc.data());
+      items.push(doc.data());
     });
     setPresents(items);
   });
 
-
+  const delPresent = id => {
+    ref.doc(`${id}`).delete();
+  }
 
   var html = presents.map ( present => 
-      <Paper key={present.id} className={classes.root, classes.paper}>
+      <Paper key={present.keyid} className={classes.root, classes.paper}>
         <h1>{present.name}</h1>
         <h2>£{present.price}</h2>
-        <IconButton><CancelIcon></CancelIcon></IconButton>
+        <IconButton onClick={delPresent(present.keyid)}><CancelIcon></CancelIcon></IconButton>
       </Paper>
       );
 

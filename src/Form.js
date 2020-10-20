@@ -35,8 +35,9 @@ const Form = () => {
 
     const { uid } = auth.currentUser; 
     const tickuid = null;
+    const keyid = Date.now().toString();
 
-    await ref.add({uid, name: nameValue, price: priceValue, tickuid});
+    await ref.add({keyid, uid, name: nameValue, price: priceValue, tickuid});
 
     setNameValue('');
     setPriceValue('');

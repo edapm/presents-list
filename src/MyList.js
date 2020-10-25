@@ -13,6 +13,9 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(0.5),
     margin: theme.spacing(7),
     textAlign: 'left',
+  },
+  delete: {
+    textAlign: 'left',
   }
 }));
 
@@ -41,10 +44,10 @@ const MyList = () => {
   }
 
   var html = presents.map ( present => 
-      <Paper key={present.keyid} className={classes.root, classes.paper}>
+      <Paper key={present.id} id={present.id} className={classes.root, classes.paper}>
         <h1>{present.name}</h1>
         <h2>£{present.price}</h2>
-        <IconButton onClick={delPresent(present.keyid)}><CancelIcon></CancelIcon></IconButton>
+        <IconButton onClick={() => { delPresent(present.id) }}><CancelIcon></CancelIcon></IconButton>
       </Paper>
       );
 

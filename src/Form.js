@@ -10,7 +10,6 @@ import { firebase } from "./Firebase";
 const firestore = firebase.firestore();
 const auth = firebase.auth();
 
-const ref = firestore.collection("presents");
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,11 +32,13 @@ const Form = () => {
   const addPresent = async (e) => {
     e.preventDefault();
 
-    const { uid } = auth.currentUser; 
+    const { uid } = auth.currentUser;
     const tickuid = null;
-    const keyid = Date.now().toString();
+    const id = Date.now().toString();
+    const ref = firestore.collection("presents").doc(id);
 
-    await ref.add({keyid, uid, name: nameValue, price: priceValue, tickuid});
+    const data = {id, uid, name: nameValue, price: priceValue, tickuid};
+    await ref.set(data);
 
     setNameValue('');
     setPriceValue('');

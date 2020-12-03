@@ -22,7 +22,7 @@
   "homepage": "https://github.com/edapm/presents-list#readme",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
+    "@material-ui/icons": "^4.11.2",
     "fir": "^3.0.7",
     "fire": "^0.55.1",
     "firebase": "^7.24.0",
